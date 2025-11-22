@@ -990,7 +990,7 @@ ul, ol, li {
   }
 }
 .avatar {
-  background-image: url(../../img/avatar-desktop.png);
+  background-image: url(../img/avatar-desktop.png);
   background-size: contain;
   width: 629px;
   height: 575px;
