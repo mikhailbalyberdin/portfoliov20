@@ -1,0 +1,21 @@
+// base
+@import "./basic/normalize";
+@import "./basic/variables";
+@import "./basic/base";
+@import "./basic/mixins";
+@import "./basic/animation";
+// sections
+@import "./sections/header";
+@import "./sections/welcome";
+@import "./sections/about-me";
+@import "./sections/skills";
+@import "./sections/projects";
+@import "./sections/reviews";
+@import "./sections/footer";
+
+// blocks
+@import "./blocks/burger-line";
+@import "./blocks/hero";
+@import "./blocks/avatar";
+
+

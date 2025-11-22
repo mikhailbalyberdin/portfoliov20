@@ -1,0 +1,230 @@
+.skills-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    padding: 64px 0;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.cross-button {
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/cross.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 15px;
+    transition: 0.7s;
+}
+
+.cross-button:hover {
+    transform: rotate(360deg);
+}
+
+.cards__item {
+    width: 200px;
+    height: 300px;
+}
+
+.card-skills {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: 0.1s 0;
+    
+    &__front {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        transform: perspective(600px) rotateY(0deg);
+        background-color: $cardColor;
+    }
+
+    &__back {
+        position: absolute;
+        color: rgb(255, 255, 255);
+        background-color: #1f1e1bea;
+        backdrop-filter: blur(3px);
+        border-radius: 10px;
+        transform: perspective(600px) rotateY(180deg);
+    }
+
+    &__front,
+    &__back {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        backface-visibility: hidden;
+        position: absolute;
+        transition: 1s;   
+    }
+
+    &.active{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 500px;
+        height: 400px;
+        z-index: 5;
+        
+        .card-skills__front {
+            transform: perspective(600px) rotateY(-180deg);
+        }
+
+        .card-skills__back {
+            transform: perspective(600px) rotateY(0deg);
+        }
+
+        .card-skills__icon {
+            visibility: hidden;
+            transition: visibility 0.3s 0;
+            
+        }
+
+        .card-text {
+            color: $fontColor;
+        }
+    }
+}
+
+.card-text {
+    position: absolute;
+    width: 95%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-size: 24px;
+    color: transparent;
+    transition: color 0.1s;
+}
+
+.fade{
+    opacity: 0;
+    transition: opacity 500ms ease;
+}
+
+.fade.active{
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(83, 4, 4, 0.61);
+    backdrop-filter: blur(5px);
+}
+
+.card-skills__icon {
+    fill: #F0E3CA;
+    transition: 0.4s;
+    &--html,
+    &--css {
+        width: 114px;
+        height: 
+        129px;
+    }
+    &--javascript,
+    &--scss,
+    &--git {
+        width: 128px;
+        height: 128px;
+    }
+}
+
+.card-skills__text {
+    color: $fontColor;
+    text-align: center;
+    font-size: 32px;
+    transition: 0.4s;
+}
+
+@media(hover:hover) {
+    .card-skills:hover {
+        cursor: pointer;
+        .card-skills__icon--html {
+            fill: #FC490B;
+            filter: drop-shadow(0 0 3px #FC490B);
+        }
+        .card-skills__icon--css {
+            fill: #2196F4;
+            filter: drop-shadow(0 0 3px #2196F4);
+        }
+        .card-skills__icon--git {
+            fill: #F25234;
+            filter: drop-shadow(0 0 3px #F25234);
+        }
+        .card-skills__icon--javascript {
+            fill: #FDDF00;
+            filter: drop-shadow(0 0 3px #FDDF00);
+        }
+        .card-skills__icon--scss {
+            fill: #CA669B;
+            filter: drop-shadow(0 0 3px #CA669B);
+        }
+        .card-skills__text--html {
+            color: #FC490B;
+        }
+        .card-skills__text--css {
+            color: #2196F4;
+        }
+        .card-skills__text--git {
+            color: #F25234;
+        }
+        .card-skills__text--javascript {
+            color: #FDDF00;
+        }
+        .card-skills__text--scss {
+            color: #CA669B;
+        }
+    }
+}
+
+@media(max-width: 500px) {
+    .card-skills.active {
+        width: 90%;
+    }
+}
+
+@media(max-width: 450px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards__item {
+        width: 285px;
+        height: 60px;
+    }
+    .card-skills__front {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-left: 30px;
+    }
+    .card-skills__icon--html,
+    .card-skills__icon--css {
+        width: 28px;
+        height: 32px;
+    }
+    .card-skills__icon--git,
+    .card-skills__icon--javascript,
+    .card-skills__icon--scss {
+        width: 32px;
+        height: 32px;
+    }
+}
+

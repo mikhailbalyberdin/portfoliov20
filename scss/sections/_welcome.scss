@@ -1,0 +1,17 @@
+.welcome {
+    padding: 146px 0 72.5px; 
+}
+
+.welcome__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media(max-width: 1050px) {
+    .welcome__content {
+        flex-direction: column;
+        row-gap: 64px;
+    }
+}
+

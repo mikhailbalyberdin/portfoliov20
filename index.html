@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./js/slider/slider.css">
+    <link rel="card-skills__icon" href="./img/favcard-skills__icon.ico" sizes="16x16" type="image/x-card-skills__icon">
+    <script src="./js/mobile-menu.js" defer="defer"></script>
+    <script src="./js/skills.js" defer="defer"></script>
+    <script src="./js/creator.js" defer="defer" type="module"></script>
+    <script src="./js/slider-review.js" defer="defer" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="./js/animations.js" defer="defer"></script>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="logo">
+                    <img src="./img/logo.svg" alt="" class="logo__image">
+                </div>
+                <nav class="menu" id="mobile-menu">
+                    <ul class="header-list">
+                        <li class="header-list__item">
+                            <a href="#about-me" class="anchor-link" data-anchor-link>
+                                about me
+                            </a>
+                        </li>
+                        <li class="header-list__item">
+                            <a href="#skills" class="anchor-link" data-anchor-link>
+                                skills
+                            </a>
+                        </li>
+                        <li class="header-list__item">
+                            <a href="#projects" class="anchor-link" data-anchor-link>
+                                projects
+                            </a>
+                        </li>
+                        <li class="header-list__item">
+                            <a href="#footer" class="anchor-link " data-anchor-link>
+                                contact
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="burger" id="button-burger">
+                    <span class="burger__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="welcome">
+            <div class="container">
+                <div class="welcome__content">
+                    <article class="hero">
+                        <h1 class="hero__title" id="heroTitle">Alexey Borisov</h1>
+                        <h2 class="hero__subtitle" id="heroSubtitle">Frontend Developer</h2>
+                        <p class="hero__description" id="heroDescription">Frontend developer looking for ideas and projects for himself and others.</p>
+                    </article>
+                    <article class="avatar">
+                        <div class="avatar__image avatar__image--bottom"></div>
+                        <div class="avatar__image avatar__image--mid"></div>
+                        <div class="avatar__image avatar__image--top"></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="about-me" id="about-me">
+            <div class="container">
+                <div class="about-me__content">
+                    <div class="mini-logo">
+                        <div class="mini-logo__image mini-logo__image--bottom-image"></div>
+                        <div class="mini-logo__image mini-logo__image--top-image"></div>
+                    </div>
+                    <div class="about-me__description" id="description">
+                        A few years ago, I became interested in developing websites and interfaces. Since then, I have been steadily improving my skills. Now I am developing websites and web applications to order or for myself.
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <section class="skills" id="skills">
+            <div class="container">
+                <div class="skills-content">
+                    <h3 class="context-title" id="context-title">
+                        My Skills
+                    </h3>
+                    <div class="fade" id="fade"></div>
+                    <ul class="cards">
+                        <li class="cards__item">
+                            <article class="card-skills" id="card-html" data-card>
+                                <div class="card-skills__front">
+                                    <svg class="card-skills__icon card-skills__icon--html">
+                                        <use xlink:href="./img/sprite.svg#html"></use>
+                                    </svg>
+                                    <p class="card-skills__text card-skills__text--html">HTML5</p>
+                                </div>
+                                <div class="card-skills__back">
+                                    <button class="cross-button" data-cross-button></button>
+                                    <p class="card-text">HTML will make your website well-structured and organized.</p>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="cards__item">
+                            <article class="card-skills" id="card-css" data-card>
+                                <div class="card-skills__front">
+                                    <svg class="card-skills__icon card-skills__icon--css">
+                                        <use xlink:href="./img/sprite.svg#css"></use>
+                                    </svg>
+                                    <p class="card-skills__text card-skills__text--css">CSS3</p>
+                                </div>
+                                <div class="card-skills__back">
+                                    <button class="cross-button" data-cross-button></button>
+                                    <p class="card-text">CSS will make your website pleasing and uniform, easy to follow and use.</p>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="cards__item">
+                            <article class="card-skills" id="card-js" data-card>
+                                <div class="card-skills__front">
+                                    <svg class="card-skills__icon card-skills__icon--javascript">
+                                        <use xlink:href="./img/sprite.svg#js"></use>
+                                    </svg>
+                                    <p class="card-skills__text card-skills__text--javascript">JavaScript</p>
+                                </div>
+                                <div class="card-skills__back">
+                                    <button class="cross-button" data-cross-button></button>
+                                    <p class="card-text">JavaScript language will make your website animated and fluid.</p>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="cards__item">
+                            <article class="card-skills" id="card-scss" data-card>
+                                <div class="card-skills__front">
+                                    <svg class="card-skills__icon card-skills__icon--scss">
+                                        <use xlink:href="./img/sprite.svg#scss"></use>
+                                    </svg>
+                                    <p class="card-skills__text card-skills__text--scss">SCSS</p>
+                                </div>
+                                <div class="card-skills__back">
+                                    <button class="cross-button" data-cross-button></button>
+                                    <p class="card-text">SCSS code will make code easy to understand for other developers, excluding any possible problems and conflicts.</p>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="cards__item">
+                            <article class="card-skills" id="card-git" data-card>
+                                <div class="card-skills__front">
+                                    <svg class="card-skills__icon card-skills__icon--git">
+                                        <use xlink:href="./img/sprite.svg#git"></use>
+                                    </svg>
+                                    <p class="card-skills__text card-skills__text--git">Git</p>
+                                    
+                                </div>
+                                <div class="card-skills__back">
+                                    <button class="cross-button" data-cross-button></button>
+                                    <p class="card-text">Git will ensure that your website can be accessed from other devices and make 
+                                    it possible for multiple developers to make it perfect.</p>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="projects" id="projects">
+            <div class="container">
+                <div class="projects__content">
+                    <h3 class="context-title">Projects</h3>
+                    <ul class="projects-list">
+                        <li class="projects-list__item">
+                            <article class="project-card" data-project-card>
+                                <img src="./img/minecraft_preview.png" alt="" class="project-card__image">
+                                <div class="project-card__info">
+                                    <div class="project-card__hero">
+                                        <h6 class="context-title">Minecraft</h6>
+                                        <p class="project-card__stack">HTML, CSS, JS, JQuery</p>
+                                    </div>
+                                    <div class="project-card__description">
+                                        <p class="project-card__specification">Website for minecraft fans. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        <a href="https://mikhailbalyberdin.github.io/minecraft/" target="blank" class="project-card__link">See more →</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="projects-list__item">
+                            <article class="project-card" data-project-card>
+                                <img src="./img/minecraft_preview.png" alt="" class="project-card__image">
+                                <div class="project-card__info">
+                                    <div class="project-card__hero">
+                                        <h6 class="context-title">Minecraft</h6>
+                                        <p class="project-card__stack">HTML, CSS, JS</p>
+                                    </div>
+                                    <div class="project-card__description">
+                                        <p class="project-card__specification">Website for minecraft fans.</p>
+                                        <a href="" class="project-card__link">See more →</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="projects-list__item">
+                            <article class="project-card" data-project-card>
+                                <img src="./img/minecraft_preview.png" alt="" class="project-card__image">
+                                <div class="project-card__info">
+                                    <div class="project-card__hero">
+                                        <h6 class="context-title">Minecraft</h6>
+                                        <p class="project-card__stack">HTML, CSS, JS</p>
+                                    </div>
+                                    <div class="project-card__description">
+                                        <p class="project-card__specification">Website for minecraft fans.</p>
+                                        <a href="" class="project-card__link">See more →</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="reviews">
+            <div class="container">
+                <div class="reviews__content">
+                    <h3 class="context-title">
+                        Reviews
+                    </h3>
+                    <div class="slider" id="slider">
+                        <div class="slider__slide">
+                            <div class="slider__reviewer">
+                                <div class="slider__image-container slider__image-container--pavel-viktor"></div>
+                                <h4 class="slider__title">Павел Виктор</h4>
+                            </div>
+                            <div class="slider__review">
+                                <p class="slider__review-paragraph">
+                                    Хочу выразить искреннюю благодарность за созданные вами сайты, посвящённые физике. 
+                                    Это по-настоящему качественный, вдумчивый ресурс, сделанный с любовью к предмету и уважением к учащимся.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="slider__slide">
+                            <div class="slider__reviewer">
+                                <div class="slider__image-container slider__image-container--magnus-karlsen"></div>
+                                <h4 class="slider__title">Магнус Карлсен</h4>
+                            </div>
+                            <div>
+                                <p class="slider__review-paragraph">
+                                    Как человек, посвятивший шахматам всю жизнь, я всегда рад видеть ресурсы, которые продвигают эту древнюю и одновременно вечно молодую игру. Сайт, который вы создали, — это именно такой случай.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="slider__slide">
+                            <div class="slider__reviewer">
+                                <div class="slider__image-container slider__image-container--dmitry-petrov"></div>
+                                <h3 class="slider__title">Дмитрий Петров</h3>
+                            </div>
+                            <div>
+                                <p class="slider__review-paragraph">
+                                    Я глубоко убеждён: язык — это не набор правил, а живая система, отражающая мышление, культуру и логику. Именно такой подход я увидел в ваших сайтах, посвящённых лингвистике и изучению языков.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__message">
+                    <div class="logo">
+                        <img src="./img/logo.svg" alt="" class="logo__image">
+                    </div>                    
+                    <p class="footer__text">
+                        If you liked my work and you need me, I'm ready to talk to you.
+                    </p>
+                </div>
+                <div class="footer__contacts">
+                    <h3 class="context-title">
+                    Contacts
+                    </h3>
+                    <ul class="contacts-list">
+                        <li class="contacts-list__item">
+                            <a class="contacts-list__link" href="mailto:mikhailbalyberdin08@gmail.com">
+                                
+                                <div class="contacts-list__wrapper-icon">
+                                    <svg class="contacts-list__icon" viewBox="0 0 32 32" width="40px" height="40px">
+                                        <use href="./img/sprite.svg#mail-icon"></use>
+                                    </svg>
+                                </div>
+                                <span class="contacts-list__text">
+                                    mikhailbalyberdin08@gmail.com
+                                </span>
+                            </a>
+                        </li>
+                        <li class="contacts-list__item">
+                            <!-- Написать href после обновления аккаунта -->
+                            <a class="contacts-list__link" href="">
+                                <div class="contacts-list__wrapper-icon">
+                                    <svg class="contacts-list__icon" viewBox="0 0 24 24"  width="40px" height="40px">
+                                    <use href="./img/sprite.svg#telegram-icon"></use>
+                                </svg>
+                                </div>
+                                
+                                <span class="contacts-list__text">
+                                    @misha
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

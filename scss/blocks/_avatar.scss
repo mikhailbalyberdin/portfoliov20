@@ -1,0 +1,89 @@
+.avatar {
+    background-image: url(../../img/avatar-desktop.png);
+    background-size: contain;
+    width: 629px;
+    height: 575px;
+    background-repeat: no-repeat;
+    position: relative; 
+}
+
+.avatar__image {
+    width: 374px;
+    height: 374px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+
+    &--bottom {
+        background-color: rgba(240, 227, 202, 0.72);
+        transform: translate(-50%, -50%) rotate(-24deg);
+        animation: rotate 10s linear infinite;
+        filter: blur(10px);
+    }
+    &--mid {
+        background-color:  rgba(255, 130, 5, 0.72);
+        transform: translate(-50%, -50%) rotate(30deg); 
+        animation: rotate 7s ease-in-out infinite;
+        filter: blur(10px);
+    }
+    &--top {
+        background-image: url(../../img/avatar.jpg);
+        background-position:80%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media(max-width: 1200px) {
+    .avatar {
+        width: 529px;
+        height: 475px;
+    }
+    .avatar__image {
+        width: 278px;
+        height: 276px;
+    }
+    
+}
+
+@media(max-width: 1050px) {
+    .avatar {
+        width: 629px;
+        height: 575px;
+    }
+    .avatar__image {
+        width: 374px;
+        height: 374px;
+    }
+}
+
+@media(max-width: 700px) {
+    .avatar {
+        width: 529px;
+        height: 475px;
+    }
+    .avatar__image {
+        width: 278px;
+        height: 276px;
+    }
+}
+
+@media(max-width: 700px) {
+    .avatar {
+        width: 429px;
+        height: 375px;
+    }
+}
+
+@media(max-width:480px) {
+    .avatar {
+        width: 340px;
+        height: 275px;
+    }
+    .avatar__image {
+        width: 180px;
+        height: 180px;
+    }
+}
